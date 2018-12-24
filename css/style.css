@@ -2,9 +2,11 @@
           --color-texto: black;
           --color-fondo: white;
           --color-texto-cabecera: white;
+          --color-header:lightslategray;
           --color-gris-oscuro: #212529;
           --color-menu:white;
           --color-menu-hover: goldenrod;
+          --color-footer:lightslategray;
           
 }
 
@@ -20,6 +22,8 @@ body {
           font-family: "Open Sans", serif;
           background-color: var(--color-fondo);
 }
+
+
 
 /** HEADER  **/
 body > header {
@@ -225,15 +229,126 @@ main > div.wrapper-main > div.wrapper-main-content > section{
           margin-top: 1rem;
 }
 
-main figure{
+section > header > p{
+          font-size: .5rem;
+}
+
+.wrapper-main-content > section > header{
+          background-color: var(--color-header);
+          padding: 1rem;
+          border: #212529 1px solid;
+}
+
+.wrapper-main-content > section > header > h2{
+          color: white;
+          text-transform: uppercase;
+}
+
+/* Who I Am */
+
+section#whoiam a:link { color: red; }
+section#whoiam a:visited { color: green; }
+section#whoiam a:hover { color: hotpink; }
+section#whoiam a:active { color: blue; }
+
+section#whoiam > .content-wrapper > .content-whoiam{
+          margin-top: 1rem;
+}
+
+section#whoiam > .content-wrapper > .content-whoiam img{
+          width: 100%;
+          padding: 1rem 0; 
+}
+
+figure{
           margin: 0;
-          float:right;
+          width: 100%;
 }
 
 figcaption {
           font-size: 0.6rem;
           text-align: center;
+}
+
+/* Studies */
+.content-kc{
+          margin-top: 1rem;
+}
+
+ .content-esi{
+          margin-top: 2rem;
+}
+
+.content-kc > header > img{
+          width:45%;
+}
+
+.content-esi > header > img{
+          width:40%;
+}
+
+.content-otros{
+          margin-top: 2rem;
+}
+
+/* Grid Estudios */
+.content-otros > .content-grid{
+          display: grid;
+          grid-gap: 20px;
+          margin-top:1rem;
+}
+
+.item-grid-year{
+          grid-column-start: 1;
+           grid-column-end: 1;
+}
+
+.item-grid-formation{
+          grid-column-start: 2;
+           grid-column-end: 2;
+}
+
+/* Grid Experiencia */
+section#experience .content-grid{
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: 30% auto;
+          margin-top:1rem;
+}
+
+.item-grid-year, .item-grid-logo{
+          grid-column-start: 1;
+          grid-column-end: 1;
+}
+
+.item-grid-empresa, .item-grid-experiencia{
+          grid-column-start: 2;
+           grid-column-end: 3;
+}
+
+.item-grid-logo img{
           width: 50%;
+}
+
+.item-grid-experiencia a:link { color: red; }
+.item-grid-experiencia a:visited { color: green; }
+.item-grid-experiencia a:hover { color: hotpink; }
+.item-grid-experiencia a:active { color: blue; }
+
+/* About Me */
+.video-wrapper {
+          position: relative;
+          margin-top: 1rem;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* Contact */
@@ -324,18 +439,24 @@ form#frm-contact  input#others{
           color: darkgreen;
 }
 
-/* .contact-wrapper{
+.bidi{ 
           width: 100%;
-          display: grid;
-          grid-template-columns: 30% auto;
-          grid-template-rows: auto;
-} */
+}
+
+.bidi img{
+          display:block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 30%;
+}
 
 /** FOOTER **/
 
 footer {
           width: 100%;
           padding: 1rem;
+          background-color: var(--color-footer);
+          border-top: #212529 1px solid;
 }
 
 /* Social */
@@ -345,7 +466,7 @@ aside.social ul {
           justify-content: center;
           padding: 0;
           /* text-align: center; */
-          font-size: 0.9rem;
+          font-size: 0.4rem;
 }
 
 aside.social a {
@@ -425,6 +546,32 @@ aside.social a:hover {
           
           .img-fluid {
                     width: 50%;
+          }
+          
+          aside.social ul {
+                    font-size: .5rem;
+          }
+          
+          section > header > p{
+                    font-size: .6rem;
+          }
+          
+          section#whoiam > .content-wrapper > .content-whoiam img{
+                    float: right;
+                    width:50%;
+                    padding: 1rem 0 1rem 1rem; 
+          }
+          
+          .content-kc > header > img{
+                    float: right;
+          }
+          
+          .content-esi > header > img{
+                    float: right;
+          }
+          
+          .content-otros > .content-grid{
+                    grid-gap: 20px 50px;
           }
           
 }
